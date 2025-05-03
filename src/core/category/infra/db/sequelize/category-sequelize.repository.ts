@@ -1,3 +1,4 @@
+import { Injectable } from "@nestjs/common";
 import { Op } from "sequelize";
 import { NotFoundError } from "../../../../shared/domain/errors/not-found.error";
 import { Uuid } from "../../../../shared/domain/value-objects/uuid.vo";
@@ -7,9 +8,10 @@ import {
   CategorySearchResult,
   ICategoryRepository,
 } from "../../../domain/category.repository";
-import { CategoryModel } from "./category.model";
 import { CategoryModelMapper } from "./category-model-mapper";
+import { CategoryModel } from "./category.model";
 
+@Injectable()
 export class CategorySequelizeRepository implements ICategoryRepository {
   sortableFields: string[] = ["name", "created_at"];
 

@@ -11,7 +11,8 @@ import { CreateCategoryInput } from "./create-category.input";
 export class CreateCategoryUseCase
   implements IUseCase<CreateCategoryInput, CreateCategoryOutput>
 {
-  constructor(private readonly categoryRepo: ICategoryRepository) {}
+  constructor(
+    private readonly categoryRepo: ICategoryRepository) {}
 
   async execute(input: CreateCategoryInput): Promise<CreateCategoryOutput> {
     const entity = Category.create(input);

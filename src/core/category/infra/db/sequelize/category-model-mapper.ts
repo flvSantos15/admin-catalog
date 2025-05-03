@@ -14,14 +14,14 @@ export class CategoryModelMapper {
   }
 
   static toEntity(model: CategoryModel): Category {
-    const entity = new Category({
+    const catgory = new Category({
       category_id: new Uuid(model.category_id),
       name: model.name,
       description: model.description,
       is_active: model.is_active,
       created_at: model.created_at,
     });
-    Category.validate(entity);
-    return entity;
+    catgory.validate();
+    return catgory;
   }
 }
