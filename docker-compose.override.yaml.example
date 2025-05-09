@@ -1,0 +1,6 @@
+services:
+  db:
+    volumes:
+      - ./.docker/dbdata:/var/lib/mysql
+    tmpfs: !reset []
+ 
