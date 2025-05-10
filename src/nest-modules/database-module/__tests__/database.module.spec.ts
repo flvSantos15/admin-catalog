@@ -1,7 +1,7 @@
 import { getConnectionToken } from '@nestjs/sequelize';
 import { Test } from '@nestjs/testing';
 import { Sequelize } from 'sequelize-typescript';
-import { ConfigModule } from '../../config-module/config.module';
+import { ConfigModule } from '../../../nest-modules/config-module/config.module';
 import { DatabaseModule } from '../database.module';
 
 describe('DatabaseModule Unit Tests', () => {
