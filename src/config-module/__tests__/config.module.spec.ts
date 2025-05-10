@@ -1,7 +1,7 @@
 import { Test } from '@nestjs/testing';
 import * as Joi from 'joi';
 import { join } from 'path';
-import { CONFIG_DB_SCHEMA, ConfigModule } from './config.module';
+import { CONFIG_DB_SCHEMA, ConfigModule } from '../config.module';
 
 function expectValidate(schema: Joi.Schema, value: any) {
   return expect(schema.validate(value, { abortEarly: false }).error.message);

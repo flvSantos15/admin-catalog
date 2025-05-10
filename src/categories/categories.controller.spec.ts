@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { ConfigModule } from 'src/config/config.module';
+import { ConfigModule } from 'src/config-module/config.module';
 import { DatabaseModule } from 'src/database/database.module';
 import { CategoriesController } from './categories.controller';
 import { CategoriesModule } from './categories.module';
